@@ -4,6 +4,7 @@ This is a sample application created to test how routing works in Ionic 4. The a
 * A side menu
 * Two main pages (home.html & list.html)
 * Two sub-pages (sub-page1.html & sub-page2.html)
+* Sub-page choice is done with `ion-segment` instead of `ion-tabs` to allow for "tabs" in the middle of the page.
 
 The sub-pages are loaded under the main pages with `router outlets`, either the Ionic `<ion-router-outlet>` or the Angular `<router-outlet>`.
 
