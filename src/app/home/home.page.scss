@@ -1,4 +1,9 @@
-.welcome-card ion-img {
-  max-height: 35vh;
+.header-card ion-img {
+  max-height: 20vh;
   overflow: hidden;
+}
+
+.sub-page {
+    position: relative;
+    min-height: 300px;
 }

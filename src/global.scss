@@ -9,3 +9,9 @@
 @import '~@ionic/angular/css/text-alignment.css';
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
+
+.split-pane-md.split-pane-visible>.split-pane-side {
+    width: 28%;
+    max-width: 320px;
+    min-width: 270px;
+}

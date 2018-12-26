@@ -1,0 +1,20 @@
+ion-content {
+    --background: var(--ion-color-dark);
+    --color: var(--ion-color-dark-contrast);
+    
+}
+
+:host-context(.router-outlet) {
+    .ion-router-outlet {
+        display: none;
+    }
+}
+:host-context(.ion-router-outlet) {
+    .router-outlet {
+        display: none;
+    }
+}
+
+.extra-space {
+    height: 200vh;
+}

@@ -1,22 +1,22 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Thing1Page } from './home.page';
+import { SubPage2Page } from './sub-page2.page';
 
-describe('Thing1Page', () => {
-  let component: Thing1Page;
-  let fixture: ComponentFixture<Thing1Page>;
+describe('SubPage2Page', () => {
+  let component: SubPage2Page;
+  let fixture: ComponentFixture<SubPage2Page>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ Thing1Page ],
+      declarations: [ SubPage2Page ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
-      .compileComponents();
+    .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(Thing1Page);
+    fixture = TestBed.createComponent(SubPage2Page);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

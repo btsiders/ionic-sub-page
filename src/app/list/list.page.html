@@ -1,27 +1,32 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>
-      List
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            {{ title }}
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
-
-<ion-content>
-  <ion-list>
-    <ion-item *ngFor="let item of items">
-      <ion-icon [name]="item.icon" slot="start"></ion-icon>
-      {{item.title}}
-      <div class="item-note" slot="end">
-        {{item.note}}
-      </div>
-    </ion-item>
-  </ion-list>
-  <!--
-    <div *ngIf="selectedItem" padding>
-      You navigated here from <b>{{selectedItem.title }}</b>
-    </div>
-  -->
+<ion-content class="router-outlet">
+    <ion-card class="header-card">
+        <ion-img src="/assets/shapes.svg"></ion-img>
+        <ion-card-header>
+            <ion-card-subtitle>Page Header</ion-card-subtitle>
+            <ion-card-title>{{ title }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            <p>This header shows up above all the sub-pages for {{ title }}. It scrolls out of the way. {{ segment.value }}</p>
+            <ion-segment scrollable #segment>
+                <ion-segment-button [value]="'sub-page1'" (click)="updateSubPage('sub-page1')">
+                    Sub-page 1
+                </ion-segment-button>
+                <ion-segment-button [value]="'sub-page2'" (click)="updateSubPage('sub-page2')">
+                    Sub-page 2
+                </ion-segment-button>
+            </ion-segment>
+        </ion-card-content>
+    </ion-card>
+    <router-outlet></router-outlet>
 </ion-content>

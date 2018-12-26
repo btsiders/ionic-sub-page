@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 
-import { ListPage } from './list.page';
+import { Thing2Page } from './list.page';
 
 @NgModule({
   imports: [
@@ -14,10 +14,15 @@ import { ListPage } from './list.page';
     RouterModule.forChild([
       {
         path: '',
-        component: ListPage
+        component: Thing2Page,
+        children: [
+            { path: '', redirectTo: 'sub-page1', pathMatch: 'full' },
+            { path: 'sub-page1', loadChildren: './../sub/sub-page1/sub-page1.module#SubPage1PageModule' },
+            { path: 'sub-page2', loadChildren: './../sub/sub-page2/sub-page2.module#SubPage2PageModule' }
+        ]
       }
     ])
   ],
-  declarations: [ListPage]
+  declarations: [Thing2Page]
 })
-export class ListPageModule {}
+export class Thing2PageModule {}
