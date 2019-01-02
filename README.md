@@ -4,10 +4,12 @@ This is a sample application created to test how routing works in Ionic 4. The a
 * A side menu
 * Two main pages (home.html & list.html)
 * Two sub-pages (sub-page1.html & sub-page2.html)
-* Sub-page choice is done with `ion-segment` instead of `ion-tabs` to allow for "tabs" in the middle of the page.
 
-The sub-pages are loaded under the main pages with `router outlets`, either the Ionic `<ion-router-outlet>` or the Angular `<router-outlet>`.
+I'm using IonSegment instead of IonTabs, but we'll just call them 'tabs' here.
 
-The goal is to find a way to do routing so that
-1. The sub-page shows up fully below the main page and it scrolls with the main page.
-2. All forward and back navigation (using the `ion-back-button` or the browser) work properly.
+To see navigation break:
+1. On Page 1, select the Balls tab
+2. Select Page 2 from the side menu
+3. Go back to Page 1 using the `ion-back-button`
+
+At this point, you should have gone back to Page 1 on the Balls tab, but your on the Bug tab. Also, if you try clicking on the Balls tab, nothing happens.
