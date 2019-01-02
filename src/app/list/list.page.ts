@@ -11,7 +11,7 @@ export class Thing2Page {
 
     @ViewChild(IonSegment) ionSegment: IonSegment;
 
-    title = 'Page Using Router-Outlet';
+    title = 'Page 2';
     selected: string = null;
 
     constructor(

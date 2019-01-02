@@ -11,14 +11,14 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 export class AppComponent {
   public appPages = [
     {
-      title: 'Ion-Router-Outlet',
+      title: 'Page 1',
       url: '/thing1',
-      icon: 'logo-ionic'
+      icon: 'document'
     },
     {
-      title: 'Router-Outlet',
+      title: 'Page 2',
       url: '/thing2',
-      icon: 'logo-angular'
+      icon: 'copy'
     }
   ];
 

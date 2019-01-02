@@ -11,7 +11,7 @@ export class Thing1Page {
 
     @ViewChild(IonSegment) ionSegment: IonSegment;
 
-    title = 'Page Using Ion-Router-Outlet';
+    title = 'Page 1';
 
     constructor(
         private navCtrl: NavController,
